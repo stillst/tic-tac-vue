@@ -15,7 +15,7 @@
         cell(name="7")
         cell(name="8")
         cell(name="9")
-    button(@click="restart") restart
+    button.restart(@click="restart") restart
 </template>
 
 <script>
@@ -126,5 +126,21 @@ export default {
     border: 1px solid #000;
     width: 300px;
     height: 300px;
+    margin-bottom: 5px;
+  }
+
+  .restart{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.4s;
+    background-color: #2ecc71;
+    color: #fff;
+
+    &:hover {
+      background-color: #27ae60;
+    }
   }
 </style>
