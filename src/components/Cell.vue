@@ -33,7 +33,7 @@ export default {
   },
   created(){
     Event.$on('gameEnd', () => this.frozen = true)
-    Event.$on('clearCells', () => {
+    Event.$on('restart', () => {
       this.frozen = false;
       this.mark = '';
     })
@@ -60,6 +60,7 @@ export default {
 
     &.not-active {
       background-color: #ecf0f1;
+      animation: pulse 1s;
     }
 
     &.x {
@@ -114,5 +115,19 @@ export default {
       }
     }
   }
+
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+}
 
 </style>
