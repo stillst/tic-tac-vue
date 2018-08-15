@@ -60,6 +60,7 @@ export default {
 
     &.not-active {
       background-color: #ecf0f1;
+      cursor: not-allowed;
       animation: pulse 1s;
     }
 
